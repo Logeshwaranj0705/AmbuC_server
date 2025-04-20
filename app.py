@@ -10,7 +10,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/location": {"origins": "https://ambuc-1.onrender.com"}}, supports_credentials=True)
+
 
 firebase_creds_b64 = os.getenv("FIREBASE_CONFIG_BASE64")
 if not firebase_creds_b64:
