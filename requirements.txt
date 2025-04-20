@@ -4,3 +4,4 @@ socketio
 flask-cors
 dotenv
 firebase_admin
+gunicorn
